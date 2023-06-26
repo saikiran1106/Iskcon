@@ -1,0 +1,483 @@
+.isk {
+    background: #e7ebf2;
+    border-radius: 1.875rem;
+    padding: 3.25rem 3.625rem;
+    margin-top: 1.2206rem;
+
+    @media screen and (max-width:768px) {
+        // padding: 2.25rem 2.625rem;
+        padding: 0;
+    }
+
+    // OVERFLOWING SHADOW RIGHT
+    .card-container {
+
+        @media screen and (max-width:768px) {
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 14px;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1;
+                filter: blur(10px);
+            }
+
+        }
+    }
+
+    // DONATION SEC
+    &_donation {
+
+        @media screen and (max-width:768px) {
+            padding: 2.25rem 0 2.25rem 2.625rem;
+        }
+
+        &_sec {
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 3rem;
+            color: #547BB3;
+            margin-bottom: 3rem;
+
+            @media screen and (max-width:768px) {
+                margin-bottom: 1.5rem;
+            }
+
+            &_descV1 {
+                font-weight: 400;
+                font-size: 1.5rem;
+                line-height: 2.25rem;
+                color: #787878;
+            }
+
+            svg {
+                margin-left: 1rem;
+                width: 2rem;
+                height: 1.5rem;
+            }
+        }
+
+
+
+        &_cards {
+            // display: flex;
+            // justify-content: flex-start;
+            // align-items: center; 
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3.85rem;
+            width: 100%;
+
+            @media screen and (max-width:768px) {
+                display: flex;
+                overflow: auto;
+                flex-wrap: nowrap;
+                gap: 1.85rem;
+                padding-bottom: 6px;
+
+                // &_card:last-child {
+                //     margin-right: 30px;
+                // }
+            }
+
+
+
+
+            &_card {
+                // width: 19.1269rem;
+                width: 100%;
+                min-height: 28.6144rem;
+                // height: 100%;
+                background: #FFFFFF;
+                // box-shadow: 19px 23px 42px rgba(116, 130, 248, 0.15);
+                box-shadow: 0.625rem 0.625rem 1.875rem rgba(116, 130, 248, 0.15);
+                border-radius: 1.875rem;
+                padding: 4.625rem 1.9375rem 2.3125rem;
+
+                @media screen and (max-width:768px) {
+                    min-width: 19.1269rem;
+                    min-height: 28.6144rem;
+
+                }
+
+                &_title {
+                    font-weight: 600;
+                    font-size: 1.75rem;
+                    line-height: 1.8125rem;
+                    color: #353858;
+                }
+
+                &_line {
+                    // width: 12.6369rem;
+                    width: 100%;
+                    height: 0rem;
+                    border: 1px solid #353858;
+                    border-radius: 0.0938rem;
+                    margin: 1.0625rem 0 1.5625rem;
+                }
+
+                &_amount {
+
+                    p {
+                        font-weight: 400;
+                        font-size: 1.125rem;
+                        line-height: 1.6875rem;
+                        color: #787878;
+
+                        span {
+                            font-weight: 600;
+                            font-size: 1.125rem;
+                            line-height: 1.6875rem;
+                            color: #686868;
+                        }
+                    }
+
+                }
+
+                &_status {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    gap: 1.4375rem;
+                    margin: 2.1706rem 0 1.7225rem;
+
+                    &--text {
+                        font-weight: 600;
+                        font-size: 1.0625rem;
+                        line-height: 1.625rem;
+                        color: #353858;
+                    }
+
+                    &--bar {
+
+                        width: 100%;
+
+                        .progress-container,
+                        .progress {
+                            // background: #353858;
+                            background: #BBCFEB;
+                            ;
+                            border-radius: 0.332rem;
+                            position: relative;
+                            height: 0.6637rem;
+                            width: 100%;
+                            overflow: hidden;
+                        }
+
+                        .progress {
+                            // background: #00FFDC;
+                            background: #F78484;
+                            border-radius: 0.332rem;
+                            width: 0;
+                            transition: width 0.4s linear;
+                        }
+
+                        // .percentage {
+                        //     background-color: #6F39B0;
+                        //     border-radius: 5px;
+                        //     box-shadow: 0 4px 5px rgb(0, 0, 0, 0.2);
+                        //     color: #fff;
+                        //     font-size: 12px;
+                        //     padding: 4px;
+                        //     position: absolute;
+                        //     top: 20px;
+                        //     left: 0;
+                        //     transform: translateX(-50%);
+                        //     width: 40px;
+                        //     text-align: center;
+                        //     transition: left 0.4s linear;
+                        // }
+
+                        // .percentage::after {
+                        //     background-color: #6F39B0;
+                        //     content: '';
+                        //     position: absolute;
+                        //     top: -5px;
+                        //     left: 50%;
+                        //     transform: translateX(-50%) rotate(45deg);
+                        //     height: 10px;
+                        //     width: 10px;
+                        //     z-index: -1;
+                        // }
+                    }
+
+                    &--milestone {
+                        font-weight: 500;
+                        font-size: 1.3125rem;
+                        line-height: 2rem;
+                        color: #353858;
+                    }
+
+                }
+
+                &_share {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    &_btn {
+                        width: 3.4688rem;
+                        height: 3.0337rem;
+                        border-radius: 0.875rem;
+                        overflow: hidden;
+                        cursor: pointer;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // PROJECTS SEC
+    &_projets {
+        margin-top: 7.1875rem;
+
+        @media screen and (max-width:768px) {
+            padding: 2.25rem 2.625rem;
+            margin-top: 0rem;
+        }
+
+        &_card {
+            width: 100%;
+            min-height: 20.2587rem;
+            background: #FFFFFF;
+            border-radius: 1.875rem;
+            padding: 2.375rem;
+            display: flex;
+            gap: 3.715rem;
+
+            @media screen and (max-width:1100px) {
+                flex-direction: column;
+            }
+
+            &_wrapper {
+                // width: 19.2325rem;
+                width: 30%;
+                // height: 15.5363rem;
+                border-radius: 1.4375rem;
+                overflow: hidden;
+
+                @media screen and (max-width:1100px) {
+                    width: 100%;
+                    height: 15.5363rem;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &_right {
+                width: 70%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-direction: column;
+
+                @media screen and (max-width:1100px) {
+                    width: 100%;
+                }
+
+                &_top {
+
+
+                    &--title {
+                        font-weight: 600;
+                        font-size: 2rem;
+                        line-height: 3rem;
+                        color: #334E76;
+                        margin-bottom: 0.8125rem;
+                    }
+
+                    &--desc {
+                        font-weight: 400;
+                        font-size: 1.1875rem;
+                        line-height: 1.625rem;
+                        color: #353858;
+                        opacity: 0.7;
+                        margin-top: 0.75rem;
+                    }
+                }
+
+                button {
+                    width: 14.66rem;
+                    height: 4.0519rem;
+                    background: #353957;
+                    box-shadow: 0.6875rem 0.6875rem 2.125rem rgba(0, 255, 220, 0.15);
+                    border-radius: 0.9375rem;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    line-height: 2.25rem;
+                    color: #FFFFFF;
+                    margin-top: 2.5rem;
+
+                    img {
+                        margin-left: 1.25rem;
+                        width: 1.1944rem;
+                        height: 0.9975rem;
+                    }
+                }
+
+            }
+        }
+    }
+
+    // BLESSING SEC
+    &_bless {
+        margin-top: 5.4875rem;
+
+        @media screen and (max-width:768px) {
+            padding: 2.25rem 0 2.25rem 2.625rem;
+            margin-top: 0rem;
+        }
+
+        &_cards {
+            // display: flex;
+            // justify-content: flex-start;
+            // align-items: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+
+            @media screen and (max-width:768px) {
+                display: flex;
+                justify-content: flex-start;
+                overflow: auto;
+                flex-wrap: nowrap;
+                gap: 1.85rem;
+                padding: 3px 0 10px;
+            }
+
+            &_card {
+                // width: 19.4838rem;
+                width: 100%;
+                min-height: 20.7725rem;
+                background: #FFFFFF;
+                box-shadow: 1.125rem 1.6875rem 2.0625rem rgba(116, 130, 248, 0.15);
+                border-radius: 1.875rem;
+                padding: 2.875rem 3rem 2.4375rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                &_category {
+                    font-weight: 600;
+                    font-size: 1.75rem;
+                    line-height: 2.625rem;
+                    color: #353858;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    svg {
+                        margin-left: 0.6531rem;
+                        width: 1.4138rem;
+                        height: 1.1812rem;
+                    }
+                }
+
+                &_icon {
+                    margin-top: 2.375rem;
+                    margin-bottom: 1.4825rem;
+                    // width: 7.6931rem;
+                    width: 100%;
+                    height: 5.0975rem;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+
+                &_addBtn {
+                    width: 13.4394rem;
+                    height: 4.0519rem;
+                    background: #353957;
+                    box-shadow: 0.6875rem 0.6875rem 2.125rem rgba(0, 255, 220, 0.15);
+                    border-radius: 0.9375rem;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    line-height: 2.25rem;
+                    color: #FFFFFF;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    // LIVE STREAM SEC
+    &_stream {
+        margin-top: 7.3637rem;
+        cursor: pointer;
+
+        @media screen and (max-width:768px) {
+            padding: 2.25rem 2.625rem;
+            margin-top: 0rem;
+        }
+
+        &_wrapper {
+            // max-width: 63.2813rem;
+            // height: 22.4131rem;
+            filter: drop-shadow(0.75rem 0.9375rem 2.25rem rgba(0, 255, 220, 0.15));
+            border-radius: 1.8125rem;
+            overflow: hidden;
+            position: relative;
+
+            @media screen and (max-width:768px) {
+                height: 22.4131rem;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            button {
+                position: absolute;
+                top: 1.5625rem;
+                right: 1.5625rem;
+                background-color: transparent;
+                padding: 0;
+                border-radius: 0.625rem;
+                width: 7.4444rem;
+                height: 2.9919rem;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        &_note {
+            font-weight: 600;
+            font-size: 1.875rem;
+            line-height: 2.8125rem;
+            color: #93002E;
+            width: 100%;
+            text-align: center;
+            margin-top: 2.25rem;
+        }
+    }
+}

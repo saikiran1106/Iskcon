@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iskcon</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+</head>
+
+
+
+<body>
+
+    <div class="wrapper1">
+
+        <section class="box">
+
+            <!-- LEFT SIDEBAR -->
+            <div class="box_leftbar deskMenu">
+
+                <!-- ISKCON LOGO -->
+                <div class="box_leftbar_wrapper">
+                    <img src="./assets/images/iskcon_logo.svg" alt="">
+                </div>
+
+                <!-- PROFILE DETAILS -->
+                <div class="box_leftbar_profile">
+                    <img src="./assets/images/avatar/profile.svg" alt="">
+                    <div class="box_leftbar_profile_details">
+                        <div class="box_leftbar_profile_details--name">Siddhanth</div>
+                        <div class="box_leftbar_profile_details--id">DID: 12345678910</div>
+                    </div>
+                </div>
+
+                <!-- MENU TAB DETAILS -->
+                <ul class="box_leftbar_tabs">
+                    <li class="activetab"><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Invoice</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">More</a></li>
+                </ul>
+            </div>
+            <!-- /LEFT SIDEBAR -->
+
+            <!-- RIGHT SIDEBAR -->
+            <div class="box_rightbar">
+
+                <!-- MOBILE HEADER -->
+                <div class="box_rightbar_header">
+
+                    <!-- ISKCON LOGO -->
+                    <div class="box_leftbar_wrapper">
+                        <img src="./assets/images/iskcon_logo.svg" alt="">
+                    </div>
+
+                    <!-- MOBILE NAV BAR -->
+                    <div id="menuToggle" class="sidebarMenu">
+                        <!-- HAMBURGER TRIGGER -->
+                        <input type="checkbox" />
+
+                        <!-- HAMBURGER LINES -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <div></div>
+                    </div>
+                    <!-- /MOBILE NAV BAR -->
+
+                    <!--MOBILE LEFT SIDEBAR -->
+                    <div id="menu" class="mobLeftbar">
+
+                        <!-- ISKCON LOGO -->
+                        <div class="mobLeftbar_wrapper">
+                            <img src="./assets/images/iskcon_logo.svg" alt="">
+                        </div>
+
+                        <!-- PROFILE DETAILS -->
+                        <div class="mobLeftbar_profile">
+                            <img src="./assets/images/avatar/profile.svg" alt="">
+                            <div class="mobLeftbar_profile_details">
+                                <div class="mobLeftbar_profile_details--name">Siddhanth</div>
+                                <div class="mobLeftbar_profile_details--id">ajskjkhjasbdhjjskjkhjasbdhj</div>
+                            </div>
+                        </div>
+
+                        <!-- MENU TAB DETAILS -->
+                        <ul class="mobLeftbar_tabs">
+                            <li class="activetab"><a href="#">Home</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Invoice</a></li>
+                            <li><a href="#">Reports</a></li>
+                            <li><a href="#">More</a></li>
+                        </ul>
+                    </div>
+                    <!-- /MOBILE LEFT SIDEBAR -->
+
+                </div>
+
+                <!-- SEARCH BAR -->
+                <div class="box_rightbar_search">
+                    <div class="box_rightbar_search_group">
+                        <img src="./assets/images/icons/search_icon.svg" alt="">
+                        <input placeholder="Search" type="text" class="input">
+
+                        <butto class="box_rightbar_search_group_btn">
+                            Go
+                            </button>
+                    </div>
+                    <div data-modal="chant108malas" class="box_rightbar_search_chantBtn modalBtn">
+                        <img src="./assets/images/icons/chant_malas.svg" alt="">
+                        <button>
+                            Chant 108 Malas
+                        </button>
+                    </div>
+                </div>
+                <!-- /SEARCH BAR -->
+
+                <!-- HEAD BUTTON BAR -->
+                <div class="box_rightbar_topbar">
+                    <div class="box_rightbar_topbar_head">Hare Krishna, Siddhanth!</div>
+
+                </div>
+                <!-- /HEAD BUTTON BAR -->
+
+                <!-- MAIN CARDS SECTION -->
+                <div class="isk">
+
+                    <!-- DONATION SECTION -->
+                    <div class="isk_donation">
+                        <div class="isk_donation_sec">Your Donations
+                            <!-- <svg width="28" height="24" viewBox="0 0 28 24"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.7921 2.12695L25.0558 11.3931L15.7921 21.0222" stroke="currentColor"
+                                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2.43361 2.12695L11.6973 11.3931L2.43361 21.0222" stroke="currentColor"
+                                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg> -->
+                        </div>
+                        <div class="card-container">
+                            <div class="isk_donation_cards grey_scroll">
+                                <div class="isk_donation_cards_card">
+                                    <div class="isk_donation_cards_card_title"> Anna Dhaan </div>
+                                    <div class="isk_donation_cards_card_line"></div>
+
+                                    <div class="isk_donation_cards_card_amount">
+                                        <p>Amt Donated: <span>Rs.<span class="amtDonated">130,000</span></span></p>
+                                        <p>Impact: <span>400 Meals</span></p>
+                                    </div>
+
+                                    <div class="isk_donation_cards_card_status">
+                                        <p class="isk_donation_cards_card_status--text">Project Status</p>
+                                        <div class="isk_donation_cards_card_status--bar">
+                                            <div class="progress-container">
+                                                <div class="progress"></div>
+                                                <!-- <div class="percentage">0%</div> -->
+                                            </div>
+                                        </div>
+                                        <p class="isk_donation_cards_card_status--milestone ">Milestone: <span
+                                                class="totalAmount">5Lac</span></p>
+                                    </div>
+
+                                    <div data-modal="share" class="isk_donation_cards_card_share modalBtn">
+                                        <div class="isk_donation_cards_card_share_btn">
+                                            <img src="./assets/images/icons/telegram_btn.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="isk_donation_cards_card">
+                                    <div class="isk_donation_cards_card_title">Temple Creation</div>
+                                    <div class="isk_donation_cards_card_line"></div>
+
+                                    <div class="isk_donation_cards_card_amount">
+                                        <p>Amt Donated: <span>Rs.<span class="amtDonated">20,000</span></span></p>
+                                        <p>Impact: <span>4%</span></p>
+                                    </div>
+
+                                    <div class="isk_donation_cards_card_status">
+                                        <p class="isk_donation_cards_card_status--text">Project Status</p>
+                                        <div class="isk_donation_cards_card_status--bar">
+                                            <div class="progress-container">
+                                                <div class="progress"></div>
+                                                <!-- <div class="percentage">0%</div> -->
+                                            </div>
+                                        </div>
+                                        <p class="isk_donation_cards_card_status--milestone ">Milestone: <span
+                                                class="totalAmount">5Lac</span></p>
+                                    </div>
+
+                                    <div data-modal="share" class="isk_donation_cards_card_share modalBtn">
+                                        <div class="isk_donation_cards_card_share_btn">
+                                            <img src="./assets/images/icons/telegram_btn.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="isk_donation_cards_card">
+                                    <div class="isk_donation_cards_card_title">Goshala</div>
+                                    <div class="isk_donation_cards_card_line"></div>
+
+                                    <div class="isk_donation_cards_card_amount">
+                                        <p>Amt Donated: <span>Rs.<span class="amtDonated">80,000</span></span></p>
+                                        <p>Impact: <span>400 Cows</span></p>
+                                    </div>
+
+                                    <div class="isk_donation_cards_card_status">
+                                        <p class="isk_donation_cards_card_status--text">Project Status</p>
+                                        <div class="isk_donation_cards_card_status--bar">
+                                            <div class="progress-container">
+                                                <div class="progress"></div>
+                                                <!-- <div class="percentage">0%</div> -->
+                                            </div>
+                                        </div>
+                                        <p class="isk_donation_cards_card_status--milestone ">Milestone: <span
+                                                class="totalAmount">5Lac</span></p>
+                                    </div>
+
+                                    <div data-modal="share" class="isk_donation_cards_card_share modalBtn">
+                                        <div class="isk_donation_cards_card_share_btn">
+                                            <img src="./assets/images/icons/telegram_btn.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /DONATION SECTION -->
+
+                    <!-- PROJECTS SECTION -->
+                    <div class="isk_projets">
+                        <div class="isk_donation_sec">On Going Projects
+                            <!-- <svg width="28" height="24" viewBox="0 0 28 24"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.7921 2.12695L25.0558 11.3931L15.7921 21.0222" stroke="currentColor"
+                                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2.43361 2.12695L11.6973 11.3931L2.43361 21.0222" stroke="currentColor"
+                                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg> -->
+                        </div>
+
+                        <div class="isk_projets_card">
+                            <div class="isk_projets_card_wrapper">
+                                <img src="./assets/images/janmastami.svg" alt="">
+                            </div>
+
+                            <div class="isk_projets_card_right">
+                                <div class="isk_projets_card_right_top">
+                                    <div class="isk_projets_card_right_top--title">Janmashtmi Puja</div>
+                                    <div class="isk_projets_card_right_top--desc">Janmashtami is perhaps the biggest
+                                        festival encompassing Lord Krishna at ISKCON. It is considered a supremely
+                                        auspicious day for Hare Krishna devotees.</div>
+                                    <div class="isk_projets_card_right_top--desc">You can contribute to the celebration
+                                        towards decorations, prashad, anna dhanam and more.</div>
+                                </div>
+
+                                <button class="isk_projets_card_right_btn">
+                                    Donate Now <img src="./assets/images/icons/white_right.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- /PROJECTS SECTION -->
+
+                    <!-- BLESSINGS SECTION -->
+                    <div class="isk_bless">
+                        <div class="isk_donation_sec">Seek Divine Blessings
+                            <!-- <svg width="28" height="24"
+                                viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.7921 2.12695L25.0558 11.3931L15.7921 21.0222" stroke="currentColor"
+                                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2.43361 2.12695L11.6973 11.3931L2.43361 21.0222" stroke="currentColor"
+                                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg> -->
+                            <p class="isk_donation_sec_descV1">Perform your Archana from anywhere!</p>
+                        </div>
+                        <div class="card-container">
+                            <div class="isk_bless_cards">
+                                <div class="isk_bless_cards_card">
+                                    <div class="isk_bless_cards_card_category">
+                                        For Families
+                                        <!-- <svg width="28" height="24" viewBox="0 0 28 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.7921 2.12695L25.0558 11.3931L15.7921 21.0222"
+                                                stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M2.43361 2.12695L11.6973 11.3931L2.43361 21.0222"
+                                                stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg> -->
+                                    </div>
+                                    <div class="isk_bless_cards_card_icon">
+                                        <img src="./assets/images/families_v2.svg" alt="">
+                                    </div>
+                                    <div data-modal="addDetails" class="isk_bless_cards_card_addBtn modalBtn">Add
+                                        Details
+                                    </div>
+                                </div>
+                                <div class="isk_bless_cards_card">
+                                    <div class="isk_bless_cards_card_category">
+                                        For Occasions
+                                        <!-- <svg width="28" height="24" viewBox="0 0 28 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.7921 2.12695L25.0558 11.3931L15.7921 21.0222"
+                                                stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M2.43361 2.12695L11.6973 11.3931L2.43361 21.0222"
+                                                stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg> -->
+                                    </div>
+                                    <div class="isk_bless_cards_card_icon">
+                                        <img src="./assets/images/ocassions_v2.svg" alt="">
+                                    </div>
+                                    <div data-modal="addDetails" class="isk_bless_cards_card_addBtn modalBtn">Add
+                                        Details
+                                    </div>
+                                </div>
+                                <div class="isk_bless_cards_card">
+                                    <div class="isk_bless_cards_card_category">
+                                        For Festivals
+                                        <!-- <svg width="28" height="24" viewBox="0 0 28 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.7921 2.12695L25.0558 11.3931L15.7921 21.0222"
+                                                stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M2.43361 2.12695L11.6973 11.3931L2.43361 21.0222"
+                                                stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg> -->
+                                    </div>
+                                    <div class="isk_bless_cards_card_icon">
+                                        <img src="./assets/images/festivals_v2.svg" alt="">
+                                    </div>
+                                    <div data-modal="addDetails" class="isk_bless_cards_card_addBtn modalBtn">Add
+                                        Details
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /BLESSINGS SECTION -->
+
+                    <!-- LIVE STREAMING SECTION -->
+                    <div data-modal="liveStream" class="isk_stream modalBtn">
+                        <div class="isk_donation_sec">LIVE Streaming
+                            <!-- <svg width="28" height="24" viewBox="0 0 28 24"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.7921 2.12695L25.0558 11.3931L15.7921 21.0222" stroke="currentColor"
+                                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2.43361 2.12695L11.6973 11.3931L2.43361 21.0222" stroke="currentColor"
+                                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg> -->
+                        </div>
+
+                        <div class="isk_stream_wrapper">
+                            <img src="./assets/images/live_stream.png" alt="">
+
+                            <button>
+                                <img src="./assets/images/icons/live_btn.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div class="isk_stream_note">Watch this Live Stream now!</div>
+                    </div>
+                    <!-- LIVE STREAMING SECTION -->
+
+                </div>
+                <!-- /MAIN CARDS SECTION -->
+
+                <!-- FOOTER -->
+                <section class="footer">
+                    <div class="footer_wrapper">
+                        <img src="./assets/images/iskcon_logo.svg" alt="">
+                    </div>
+                    <div class="footer_copyright">
+                        © 2020 ISKCON Abids, Hyderabad
+                    </div>
+                    <div class="footer_desc">
+                        Official Website | Sri Sri Radha Madan Mohan Temple | All Rights Reserved
+                    </div>
+
+                </section>
+                <!-- /FOOTER -->
+            </div>
+            <!-- /RIGHT SIDEBAR -->
+        </section>
+
+
+    </div>
+
+    <!-- MODALS -->
+
+    <!-- MODAL NO 1 :- 108 MALAS -->
+    <div id="chant108malas" class="modal ">
+        <div class="modal-content chant108malas">
+            <div class="close">
+                <img src="./assets/images/icons/close_btn.svg" alt="">
+            </div>
+
+            <div class="chant108malas_box">
+                <div class="chant108malas_box_title">108 Malas for you</div>
+
+                <div class="chant108malas_box_utube">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7bmcjp8TVo8?start=5"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="chant108malas_box_social">
+                    <button class="chant108malas_box_social--subscribe"><img
+                            src="./assets/images/icons/subscribe_btn.png" alt="subscribe_btn"></button>
+                    <button data-modal="share" class="chant108malas_box_social--telegram modalBtn"><img
+                            src="./assets/images/icons/telegram_btn.png" alt="telegram_btn"></button>
+                    <button class="chant108malas_box_social--saved"><img src="./assets/images/icons/saved_btn.png"
+                            alt="saved_btn"></button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- MODAL NO 2:- LIVE STREAM -->
+    <div id="liveStream" class="modal ">
+        <div class="modal-content liveStream">
+            <div class="close">
+                <img src="./assets/images/icons/close_btn.svg" alt="">
+            </div>
+
+            <div class="liveStream_box">
+
+                <div class="liveStream_box_top">
+                    <img class="liveStream_box_top_blueLive" src="./assets/images/icons/blue_live.svg" alt="">
+                    <div class="liveStream_box_top_title">Shivanagraj Baba ji</div>
+                    <button class="liveStream_box_top_notifyMe">
+                        <img src="./assets/images/icons/notify_me_btn.svg" alt="">
+                    </button>
+                </div>
+
+
+                <div class="liveStream_box_live">
+                    <!-- <img src="./assets/images/live_img.png" alt=""> -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/NVe7NEHjLng?start=13"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+
+                    <div class="liveStream_box_live_tag">
+                        <img src="./assets/images/icons/live_btn.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="liveStream_box_social">
+                    <button class="liveStream_box_social--subscribe"><img src="./assets/images/icons/subscribe_btn.png"
+                            alt="subscribe_btn"></button>
+                    <button data-modal="share" class="liveStream_box_social--telegram modalBtn"><img
+                            src="./assets/images/icons/telegram_btn.png" alt="telegram_btn"></button>
+                    <button class="liveStream_box_social--saved"><img src="./assets/images/icons/saved_btn.png"
+                            alt="saved_btn"></button>
+
+                    <button class="liveStream_box_social--bell">
+                        <img src="./assets/images/icons/notify_bell.svg" alt="bell">
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- MODAL NO 3:- ADD DETAILS -->
+    <div id="addDetails" class="modal ">
+        <div class="modal-content addDetails">
+            <div class="close">
+                <img src="./assets/images/icons/close_btn.svg" alt="">
+            </div>
+
+            <div class="addDetails_box">
+                <div class="addDetails_box_title">Archana Details</div>
+                <div class="addDetails_box_line"></div>
+
+            </div>
+
+            <div class="addDetails_box_formWrapper">
+                <form id="myForm">
+                    <div>
+                        <label for="date">Date</label>
+                        <input class="dateField" type="date" id="date" name="date" placeholder="dd/mm/yyyy">
+                    </div>
+
+                    <div style="display: flex;
+                    justify-content: center;
+                    align-items: center;">
+                        <label for="numMembers">Number of Members</label>
+                        <div class="number-input">
+                            <button type="button" class="minus">
+                                <svg width="16" height="4" viewBox="0 0 16 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4834 1.92969L1.6691 1.92969" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" />
+                                </svg></button>
+                            <input class="couterText" type="text" id="numMembers" name="numMembers" value="1">
+                            <button type="button" class="plus">
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.15918 1.52344V14.3377" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" />
+                                    <path d="M14.5664 7.92969L1.75211 7.92969" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="detail-sec">
+                        <label for="details">Details of the person(s)</label>
+                        <div id="detailsContainer" class="detailsContainer grey_scroll">
+                            <div class="detail-row">
+                                <input type="text" name="details[]" required placeholder="Name" />
+                                <input type="text" name="details[]" placeholder="Gothra" />
+                                <input style="width: 10.3156rem;" type="text" name="details[]"
+                                    placeholder="Nakshatara" />
+                                <input type="text" name="details[]" placeholder="Rasi" />
+                                <input style="width: 12.2525rem;" type="text" name="details[]"
+                                    placeholder="Date of Archana" />
+                                <input style="width: 12.2525rem;" type="text" name="details[]"
+                                    placeholder="Preferred Timing" />
+                            </div>
+
+                            <!-- <div class="detail-divider"></div> -->
+                        </div>
+                        <button type="button" class="addDetails_btn" id="addDetails_btn">
+                            Add
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.15918 1.52344V14.3377" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" />
+                                <path d="M14.5664 7.92969L1.75211 7.92969" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div>
+                        <label>Would you like to repeat the Archana every month?</label>
+                        <div style="margin-top: 0.625rem;">
+                            <div class="radio-button">
+                                <input type="radio" id="repeatYes" name="repeat" value="yes">
+                                <label for="repeatYes">Yes</label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" id="repeatNo" name="repeat" value="no">
+                                <label for="repeatNo">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label>Should we send Prasadh by courier?</label>
+                        <div style="margin-top: 0.625rem;">
+                            <div class="radio-button">
+                                <input type="radio" id="prasadhYes" name="prasadh" value="yes">
+                                <label for="prasadhYes">Yes</label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" id="prasadhNo" name="prasadh" value="no">
+                                <label for="prasadhNo">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button data-modal="paymentDone" type="submit" id="submitBtn" class="makePayment modalBtn"
+                        disabled>Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL NO 4 :- PAYMENT DONE -->
+    <div id="paymentDone" class="modal ">
+        <div class="modal-content paymentDone">
+            <div class="close">
+                <img src="./assets/images/icons/close_btn.svg" alt="">
+            </div>
+
+            <div class="paymentDone_box">
+                <div class="paymentDone_box_wrapper">
+                    <img src="./assets/images/icons/payment_done.svg" alt="">
+                </div>
+
+                <div class="paymentDone_box_title">
+                    Payment Done!
+                </div>
+                <div class="paymentDone_box_desc">
+                    Hare Krishna! <br>
+                    We will inform you as soon as your <br> Archana is completed
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL NO 5 :- SHARE -->
+    <div id="share" class="modal ">
+        <div class="modal-content share">
+            <div class="close">
+                <img src="./assets/images/icons/close_btn.svg" alt="">
+            </div>
+
+            <div class="share_box">
+                <div class="chant108malas_box_title">Share</div>
+                <div class="share_box_line"></div>
+
+                <div style="margin-bottom: 8px;" class="share_box_text">Share this link via</div>
+
+                <div class="share_box_socials">
+
+                    <button><img src="./assets/images/icons/tel_circle.png" alt=""></button>
+                    <button><img src="./assets/images/icons/wa_circle.png" alt="" onclick="sendWhatsAppMessage()"></button>
+
+                </div>
+
+                <div class="share_box_text">Or copy link</div>
+
+                <div class="share_box_copy">
+                    <div class="share_box_copy_group">
+                        <input value="Iskon.com/asjahsjadhjj" type="text" class="input" id="copyInput">
+                        <button class="share_box_copy_group_btn" id="copyButton">
+                            Copy
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JQUERY CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- BOOTSTRAP BUNDLE WITH PROPER -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <!-- MAIN SCRIPT -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+</body>
+
+</html>
