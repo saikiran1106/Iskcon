@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clicks Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h2 id="clickCount1" class="click-count"></h2>
+            <p class="click-text">Number of Clicks</p>
+            <p class="action-text">Chant</p>
+        </div>
+        <div class="card">
+            <h2 id="clickCount2" class="click-count"></h2>
+            <p class="click-text">Number of Clicks</p>
+            <p class="action-text">Donate</p>
+        </div>
+        <div class="card">
+            <h2 id="clickCount3" class="click-count"></h2>
+            <p class="click-text">Number of Clicks</p>
+            <p class="action-text">Live</p>
+        </div>
+    </div>
+
+    <script >
+        function updateClickCount() {
+                fetch('http://localhost:3000/api/click-count')
+                    .then(response => response.json())
+                    .then(data => {
+                        const clickCount1 = document.getElementById('clickCount1');
+
+
+                        clickCount1.textContent = data.count;
+
+                    })
+                    .catch(error => console.error(error));
+            }
+
+            function updateClickCount1() {
+                fetch('http://localhost:3000/donate')
+                    .then(response => response.json())
+                    .then(data => {
+
+                        const clickCount2 = document.getElementById('clickCount2');
+
+
+                        clickCount2.textContent = data.count;
+
+                    })
+                    .catch(error => console.error(error));
+            }
+
+            function updateClickCount2() {
+                fetch('http://localhost:3000/live', {
+                    headers: {
+
+                        'Access-Control-Allow-Origin': 'http://localhost:3000' // Replace with your frontend URL
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+
+                        const clickCount3 = document.getElementById('clickCount3');
+
+                        clickCount3.textContent = data.count;
+                    })
+                    .catch(error => console.error(error));
+            }
+
+            // Fetch the click count initially
+            function updateclickcounts() {
+                updateClickCount();
+                updateClickCount1();
+                updateClickCount2();
+            }
+
+
+            updateclickcounts();
+            // Refresh the click count every few seconds
+            setInterval(updateclickcounts, 5000);
+
+    </script>
+
+</body>
+
+</html>
+
+<style>
+    .container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.click-count {
+  font-size: 48px;
+  margin: 0;
+}
+
+.click-text {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.action-text {
+  font-size: 24px;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+
+</style>

@@ -281,6 +281,63 @@ function sendWhatsAppMessage() {
 }
 
 
+  // Send a POST request to the click counter API endpoint
+ function incrementClickCount() {
+    
+  console.log('clicked');
+  fetch('http://localhost:3000/api/increment-click/mala', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': 'http://localhost:3000' // Replace with your frontend URL
+    }
+  })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+}
+
+function incrementClickCount1() {
+  console.log('clicked');
+  fetch('http://localhost:3000/donate', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': 'http://localhost:3000' // Replace with your frontend URL
+    }
+  })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+}
+
+function incrementClickCount2() {
+  console.log('clicked');
+  fetch('http://localhost:3000/live', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': 'http://localhost:3000' // Replace with your frontend URL
+    }
+  })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+}
+
+const clickCounterDiv = document.getElementById('clickCounter');
+const donate = document.getElementById('donate');
+const live = document.getElementById('live');
+
+donate.addEventListener('click', 
+function(event){
+event.preventDefault();
+incrementClickCount1();
+}
+);
+live.addEventListener('click', incrementClickCount2);
+clickCounterDiv.addEventListener('click', incrementClickCount);
+
 
 
 
