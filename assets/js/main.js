@@ -353,7 +353,7 @@ function handleGoshalaShareClick() {
 var annaShareButton = document.querySelector('.share_anna');
 var templeShareButton = document.querySelector('.share_temple');
 var goshalaShareButton = document.querySelector('.share_goshala');
-var whatsappShareButton1 = document.getElementById('whatsapp_share_anna');
+var whatsappShareButton1 = document.getElementById('anna_wp');
 var whatsappShareButton2 = document.querySelector('.whatsapp_share_temple');
 var whatsappShareButton3 = document.querySelector('.whatsapp_share_goshala');
 
