@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .option {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #e6e6e6;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: #d3d3d3;
+        }
+
+        .selected {
+            background-color: #a7a7a7;
+            color: #ffffff;
+        }
+
+        .submit-button {
+            background-color: #4caf50;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>What is your favorite color?</h1>
+        <div class="options">
+            <div class="option">Blue</div>
+            <div class="option">Pink</div>
+            <div class="option">Yellow</div>
+            <div class="option">Green</div>
+        </div>
+        <div class="submit-button">Submit</div>
+    </div>
+
+    <script>
+      const options = document.querySelectorAll('.option');
+        const submitButton = document.querySelector('.submit-button');
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                options.forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                option.classList.add('selected');
+            });
+        });
+
+        submitButton.addEventListener('click', () => {
+            const selectedOption = document.querySelector('.selected');
+            if (selectedOption) {
+                const answer = selectedOption.textContent;
+
+                // Send the selected option to the API endpoint
+                fetch('http://localhost:3000/Temple_Creation/submit-option', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': 'http://localhost:3000'
+                    },
+                    body: JSON.stringify({ option: answer })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data.message);
+                        // Perform any additional actions upon successful submission
+                    })
+                    .catch(error => {
+                        console.error('Error submitting option:', error);
+                    });
+            }
+        });
+
+    </script>
+</body>
+<script>
+    
+</script>
+</html>

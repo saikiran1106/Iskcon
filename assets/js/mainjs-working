@@ -261,13 +261,14 @@ $(document).ready(function () {
     });
 });
 
-// Function to send WhatsApp message
-function sendWhatsAppMessage(title, amountDonated, impact) {
+
+
+function sendWhatsAppMessage() {
+  // Get the current web link
+  var currentURL = window.location.href;
+
   // Construct the WhatsApp message
-  var message = "Thank you for your donation!\n";
-  message += "Donation Title: " + title + "\n";
-  message += "Amount Donated: Rs. " + amountDonated + "\n";
-  message += "Impact: " + impact;
+  var message = "Check out this link: " + currentURL;
 
   // Encode the message to be URL safe
   var encodedMessage = encodeURIComponent(message);
@@ -279,123 +280,12 @@ function sendWhatsAppMessage(title, amountDonated, impact) {
   window.open(whatsappURL);
 }
 
-// Function to handle share button click for Anna Card
-function handleAnnaShareClick() {
-  var annaCard = document.querySelector('.Anna_Card');
-
-  if (annaCard) {
-    var amountDonatedElement = annaCard.querySelector('.amtDonated');
-    var impactElement = annaCard.querySelector('.isk_donation_cards_card_amount p:nth-child(2) span');
-    var titleElement = annaCard.querySelector('.isk_donation_cards_card_title');
-
-    if (amountDonatedElement && impactElement && titleElement) {
-      var amountDonated = amountDonatedElement.textContent;
-      var impact = impactElement.textContent;
-      var title = titleElement.textContent;
-
-      sendWhatsAppMessage(title, amountDonated, impact);
-    } else {
-      console.error('Required elements not found in Anna Card.');
-    }
-  } else {
-    console.error('Anna Card not found.');
-  }
-}
-
-// Function to handle share button click for Temple Card
-function handleTempleShareClick() {
-  var templeCard = document.querySelector('.temple_card');
-
-  if (templeCard) {
-    var amountDonatedElement = templeCard.querySelector('.amtDonated');
-    var impactElement = templeCard.querySelector('.isk_donation_cards_card_amount p:nth-child(2) span');
-    var titleElement = templeCard.querySelector('.isk_donation_cards_card_title');
-
-    if (amountDonatedElement && impactElement && titleElement) {
-      var amountDonated = amountDonatedElement.textContent;
-      var impact = impactElement.textContent;
-      var title = titleElement.textContent;
-
-      sendWhatsAppMessage(title, amountDonated, impact);
-    } else {
-      console.error('Required elements not found in Temple Card.');
-    }
-  } else {
-    console.error('Temple Card not found.');
-  }
-}
-
-// Function to handle share button click for Goshala Card
-function handleGoshalaShareClick() {
-  var goshalaCard = document.querySelector('.goshala_card');
-
-  if (goshalaCard) {
-    var amountDonatedElement = goshalaCard.querySelector('.amtDonated');
-    var impactElement = goshalaCard.querySelector('.isk_donation_cards_card_amount p:nth-child(2) span');
-    var titleElement = goshalaCard.querySelector('.isk_donation_cards_card_title');
-
-    if (amountDonatedElement && impactElement && titleElement) {
-      var amountDonated = amountDonatedElement.textContent;
-      var impact = impactElement.textContent;
-      var title = titleElement.textContent;
-
-      sendWhatsAppMessage(title, amountDonated, impact);
-    } else {
-      console.error('Required elements not found in Goshala Card.');
-    }
-  } else {
-    console.error('Goshala Card not found.');
-  }
-}
-
-// Add event listeners to share buttons
-// Add event listeners to share buttons
-var annaShareButton = document.querySelector('.share_anna');
-var templeShareButton = document.querySelector('.share_temple');
-var goshalaShareButton = document.querySelector('.share_goshala');
-var whatsappShareButton1 = document.getElementById('whatsapp_share_anna');
-var whatsappShareButton2 = document.querySelector('.whatsapp_share_temple');
-var whatsappShareButton3 = document.querySelector('.whatsapp_share_goshala');
-
-  annaShareButton.addEventListener('click', function() {
-
-    console.log('clicked');
-
-    whatsappShareButton1.style.display = 'inline-block';
-    whatsappShareButton2.style.display = 'none';
-    whatsappShareButton3.style.display = 'none';
-  });
-
-
-
-  templeShareButton.addEventListener('click', function() {
-   
-     whatsappShareButton1.style.display = 'none';
-    whatsappShareButton2.style.display = 'inline-block';
-    whatsappShareButton3.style.display = 'none';
-  });
-
-
-
-  goshalaShareButton.addEventListener('click', function() {
-    whatsappShareButton3.style.display = 'inline-block';
-      whatsappShareButton1.style.display = 'none';
-    whatsappShareButton2.style.display = 'none';
-    
-  });
-
-
-
-
-
-
-
 
   // Send a POST request to the click counter API endpoint
  function incrementClickCount() {
     
   console.log('clicked');
-  fetch('http://localhost:3000/Temple_Creation', {
+  fetch('http://localhost:3000/api/increment-click/mala', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -449,49 +339,7 @@ live.addEventListener('click', incrementClickCount2);
 clickCounterDiv.addEventListener('click', incrementClickCount);
 
 
-
-const submitForm = async () => {
-  const form = document.getElementById('myForm');
-  const formData = new FormData(form);
-  
-
-  // Retrieve the details input fields and convert them to an array of objects
-  const detailsInputs = Array.from(document.querySelectorAll('.detail-row'));
-  const details = detailsInputs.map((detailInput) => {
-    const inputs = detailInput.querySelectorAll('input');
-    return {
-      name: inputs[0].value,
-      gothra: inputs[1].value,
-      nakshatara: inputs[2].value,
-      rasi: inputs[3].value,
-      dateOfArchana: inputs[4].value,
-      preferredTiming: inputs[5].value
-    };
-  });
-
-  // Assign the details array to the form data
-  formData.append('details', JSON.stringify(details));
-
-  // Submit the form data to the server
-  try {
-    const response = await fetch('http://localhost:4000/api/submit-form', {
-      method: 'POST',
-      body: formData
-    });
-    const data = await response.json();
-    console.log(data.message);
-  } catch (error) {
-    console.error('Error submitting form:', error);
-  }
-};
-// Add event listener to the submit button
-const submitButton = document.getElementById('submitBtn');
-submitButton.addEventListener('click', submitForm);
-
-
-
-
-document.getElementById('myForm').addEventListener('submit', function(event) {
+ document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
     const form = event.target;
@@ -540,6 +388,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
         alert('Error submitting form');
       });
   });
+
 
 
 

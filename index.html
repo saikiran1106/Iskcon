@@ -148,7 +148,7 @@
                         </div>
                         <div class="card-container">
                             <div class="isk_donation_cards grey_scroll">
-                                <div class="isk_donation_cards_card">
+                                <div class="isk_donation_cards_card Anna_Card">
                                     <div class="isk_donation_cards_card_title"> Anna Dhaan </div>
                                     <div class="isk_donation_cards_card_line"></div>
 
@@ -170,12 +170,12 @@
                                     </div>
 
                                     <div data-modal="share" class="isk_donation_cards_card_share modalBtn">
-                                        <div class="isk_donation_cards_card_share_btn">
+                                        <div class="isk_donation_cards_card_share_btn share_anna">
                                             <img src="./assets/images/icons/telegram_btn.png" alt="">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="isk_donation_cards_card">
+                                <div class="isk_donation_cards_card temple_card">
                                     <div class="isk_donation_cards_card_title">Temple Creation</div>
                                     <div class="isk_donation_cards_card_line"></div>
 
@@ -197,12 +197,12 @@
                                     </div>
 
                                     <div data-modal="share" class="isk_donation_cards_card_share modalBtn">
-                                        <div class="isk_donation_cards_card_share_btn">
+                                        <div class="isk_donation_cards_card_share_btn share_temple">
                                             <img src="./assets/images/icons/telegram_btn.png" alt="">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="isk_donation_cards_card">
+                                <div class="isk_donation_cards_card goshala_card">
                                     <div class="isk_donation_cards_card_title">Goshala</div>
                                     <div class="isk_donation_cards_card_line"></div>
 
@@ -224,7 +224,7 @@
                                     </div>
 
                                     <div data-modal="share" class="isk_donation_cards_card_share modalBtn">
-                                        <div class="isk_donation_cards_card_share_btn">
+                                        <div class="isk_donation_cards_card_share_btn share_goshala">
                                             <img src="./assets/images/icons/telegram_btn.png" alt="">
                                         </div>
                                     </div>
@@ -497,7 +497,7 @@
             </div>
 
             <div class="addDetails_box_formWrapper">
-                <form id="myForm">
+                <form id="myForm" method="POST">
                     <div>
                         <label for="date">Date</label>
                         <input class="dateField" type="date" id="date" name="date" placeholder="dd/mm/yyyy">
@@ -634,8 +634,12 @@
                 <div class="share_box_socials">
 
                     <button><img src="./assets/images/icons/tel_circle.png" alt=""></button>
-                    <button><img src="./assets/images/icons/wa_circle.png" alt="" onclick="sendWhatsAppMessage()"></button>
 
+                    <button id="whatsapp_share_anna" style=" display: none; "><img src="./assets/images/icons/wa_circle.png"  alt="" onclick="handleAnnaShareClick()"></button>
+                    <button class="whatsapp_share_temple" style=" display: none; "><img src="./assets/images/icons/wa_circle.png" alt="" onclick="handleTempleShareClick()"></button>
+                    <button class="whatsapp_share_goshala
+                    " style=" display: none; "><img src="./assets/images/icons/wa_circle.png" alt="" onclick="handleGoshalaShareClick()"></button>
+                    
                 </div>
 
                 <div class="share_box_text">Or copy link</div>
@@ -665,7 +669,10 @@
     <!-- MAIN SCRIPT -->
     <script src="assets/js/main.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
+<script>
 
+    
+</script>
 </body>
 
 </html>
